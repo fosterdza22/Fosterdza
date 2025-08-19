@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Payment Failed{% endblock %}
+
+{% block content %}
+    <h2>Payment Failed</h2>
+    <p>Unfortunately, we were unable to process your payment.</p>
+    {% if message %}
+        <p><strong>Reason:</strong> {{ message }}</p>
+    {% endif %}
+    <p>Please try again or contact support.</p>
+    <a href="{{ url_for('cart.view_cart') }}">Back to Cart</a>
+{% endblock %}
